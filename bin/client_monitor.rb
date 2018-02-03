@@ -1,0 +1,24 @@
+require 'socket'
+
+hostname = 'localhost'
+port = 16201
+
+# deal with arguments
+if ARGV.length < 1
+  #puts "Host name | IP : "
+  print "Host name | IP : "
+  hostname = gets.chomp
+  $stdout.flush
+else
+  hostname = ARGV[0]
+end
+
+# open socket to server
+s = TCPSocket.open(hostname, port)
+
+# print to std out what comes across socket
+while line = s.gets
+  puts line.chomp
+end
+
+s.close
