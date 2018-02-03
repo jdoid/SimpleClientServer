@@ -4,8 +4,8 @@ This is a very simple Ruby client/server to check up on my server(s) status.  Th
 
 ## Tested Platform
 
-*Ubuntu Server 16.04.3 LTS (xenial)
-*Ubuntu Server 14.04.5 LTS (trusty)
+* Ubuntu Server 16.04.3 LTS (xenial)
+* Ubuntu Server 14.04.5 LTS (trusty)
 
 ## Getting Started
 
