@@ -1,25 +1,24 @@
 require 'socket'
 
-server = TCPServer.open(16201)
+port = 2200
+server = TCPServer.open(port)
 
-cli = lambda { |command| command }
+$cli = lambda { |command| command }
+
+def execute
+  File.foreach('sys_commands').with_index do |line|
+      $client.puts($cli.call(`#{line}`))
+      $client.puts
+    end
+end
 
 loop {
-  client = server.accept
-  client.puts(Time.now.ctime)
-  client.puts
+  $client = server.accept
+  
+  $client.puts(Time.now.ctime)
+  $client.puts
+  
+  execute
 
-   # users logged in
-  client.puts(cli.call(`users`))
-  client.puts
-
-  # Minecraft server status
-  client.puts(cli.call(`msm server list`))
-  client.puts
-
-  # Plex server running
-  client.puts(cli.call(`ps -ef | grep "Plex Media Server" | grep -v grep`))
-  client.puts
-
-  client.close
+  $client.close
 }
