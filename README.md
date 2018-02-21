@@ -11,15 +11,15 @@ This is a very simple Ruby client/server to check up on my Linux server(s) statu
 ## Files
   bin/client_monitor.rb
     This file is executed from either the server or another server/client on the network.
-		If desired edit file and change socket value for the client / server connection.
-			port = 2200
+    If desired edit file and change socket value for the client / server connection.
+		port = 2200
       
   bin/server_monitor.rb
     This file along with sys_commands file live in the same directory on the server that is to report output from the list of     
     commands in the sys_command file.
 
     If desired edit file and change socket value for the client / server connection.
-	    port = 2200
+	    	port = 2200
 	
   bin/sys_commands
     Edit this file to include the commands you want to be executed.  Treat each line in the file as a separate command to be 
@@ -27,14 +27,15 @@ This is a very simple Ruby client/server to check up on my Linux server(s) statu
       Example: 
 	      whoami
 	      uptime
-        df -h
+	      df -h
 
 ## Getting Started
   Server
     Edit sys_commands file as described in section “Files”.
     Copy files server_monitor.rb and sys_commands to a directory on the reporting server.
-    Example location:	/home/<user>/bin/ server_monitor.rb
-				              /home/<user>/bin/ sys_commands
+    Example location:	
+    	/home/<user>/bin/ server_monitor.rb
+	/home/<user>/bin/ sys_commands
 			
 	Execute server_monitory.rb
 		$ cd /home/<user>/bin
@@ -45,7 +46,7 @@ Client
   will prompt for the IP address of the server running server_monitor.rb.  If you are executing from the same server answer 
   prompt with 'localhost' otherwise use an IP address or hostname.
 	
-  Example:  $ ruby client_monitor.rb
+  	$ ruby client_monitor.rb
 
 ## Bugs and Feedback
 
