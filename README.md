@@ -10,24 +10,24 @@ This is a very simple Ruby client/server to check up on my Linux server(s) statu
 
 ## Files
 
-* bin/client_monitor.rb
+#### bin/client_monitor.rb
 
 This file is executed from either the server or another server/client on the network. If desired edit file and change socket value for the client / server connection.
 
 port = 2200
       
-* bin/server_monitor.rb
+#### bin/server_monitor.rb
 
 This file along with sys_commands file live in the same directory on the server that is to report output from the list of     commands in the sys_command file. If desired edit file and change socket value for the client / server connection.
 
 port = 2200
 	
-* bin/sys_commands
+#### bin/sys_commands
 
 Edit this file to include the commands you want to be executed. Treat each line in the file as a separate command to be executed on a Linux command line, including pipes, regular expressions, etc.
 
 ## Getting Started
-* Server
+#### Server
 
 Edit sys_commands file as described in section “Files”. Copy files server_monitor.rb and sys_commands to a directory on the reporting server.
 Example location:
@@ -37,7 +37,7 @@ Example location:
 	$ cd /home/<user>/bin
 	$ ruby server_monitory.rb &
 
-* Client
+#### Client
 
 You can execute client_monitor.rb on the same server or from another server on the same network.  Currently client_monitor.rb will prompt for the IP address of the server running server_monitor.rb.  If you are executing from the same server answer prompt with 'localhost' otherwise use an IP address or hostname.
 	
