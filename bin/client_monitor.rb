@@ -1,11 +1,10 @@
 require 'socket'
 
 hostname = 'localhost'
-port = 16201
+port = 2200
 
 # deal with arguments
 if ARGV.length < 1
-  #puts "Host name | IP : "
   print "Host name | IP : "
   hostname = gets.chomp
   $stdout.flush
