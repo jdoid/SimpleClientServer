@@ -30,9 +30,7 @@ Edit this file to include the commands you want to be executed. Treat each line 
 #### Server
 
 Edit sys_commands file as described in section “Files”. Copy files server_monitor.rb and sys_commands to a directory on the reporting server.
-Example location:
-/home/<user>/bin/ server_monitor.rb
-/home/<user>/bin/ sys_commands
+Example location:  /home/<user>/bin/server_monitor.rb /home/<user>/bin/sys_commands
 			
 	$ cd /home/<user>/bin
 	$ ruby server_monitory.rb &
