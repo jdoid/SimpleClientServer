@@ -37,9 +37,10 @@ Example location:  /home/<user>/bin/server_monitor.rb /home/<user>/bin/sys_comma
 
 #### Client
 
-You can execute client_monitor.rb on the same server or from another server on the same network.  Currently client_monitor.rb will prompt for the IP address of the server running server_monitor.rb.  If you are executing from the same server answer prompt with 'localhost' otherwise use an IP address or hostname.
+You can execute client_monitor.rb on the same server or from another server on the same network.  For crob friendly usage there is no prompt for hostname and 'localhost' is the default host.  One IP address or hostname can be added as a single command line option. See examples:
 	
-  	$ ruby client_monitor.rb
+  	$ ruby client_monitor.rb			
+  	$ ruby client_monitory.rb 192.168.1.10
 
 ## Bugs and Feedback
 
