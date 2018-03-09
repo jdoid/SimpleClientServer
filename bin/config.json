@@ -1,0 +1,8 @@
+{
+  "to": "replaceme_with_real_email@fakemail.com",
+  "server": "localhost",
+  "from": "replaceme_with_real_email@fakemail.com",
+  "from_alias": "Naboo Emailer",
+  "subject": "Naboo Server Status",
+  "body": "<replace with a real path to>/status.out"
+}

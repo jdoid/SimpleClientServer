@@ -1,4 +1,5 @@
 require 'socket'
+require_relative 'send_mail'
 
 port = 2200
 server = TCPServer.open(port)
@@ -22,14 +23,13 @@ end
 
 loop {
   $client = server.accept
-  
-  $client.puts(Time.now.ctime)
   $client.puts
   
   File.delete "status.out"
   write_to_file
   send_status
-  
+  mail = SendEmail.new
+  mail.send_email
 
   $client.close
 }
