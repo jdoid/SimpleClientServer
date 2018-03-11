@@ -31,7 +31,7 @@ Edit this file to include the commands you want to be executed. Treat each line 
 Edit this file for email configuration that is read in by server for send-only SMTP.
 
 ## Getting Started
-The Server can now send an email with status.  This implies the server should be configure postfix as a send-only SMTP Server.  For now postfix configuration is beyond the scope of the document.
+The Server can now send an email with status.  This implies the server should be postfix configured as a send-only SMTP Server.  For now postfix configuration is beyond the scope of the document.
 #### Server
 
 Edit sys_commands file as described in section “Files”. Copy files server_monitor.rb and sys_commands to a directory on the reporting server.
