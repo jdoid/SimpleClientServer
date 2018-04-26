@@ -37,15 +37,15 @@ The Server can now send an email with status.  This implies the server should be
 Edit sys_commands file as described in section “Files”. Copy files server_monitor.rb and sys_commands to a directory on the reporting server.
 Example location:  /home/<user>/bin/server_monitor.rb /home/<user>/bin/sys_commands
 			
-	`$ cd /home/<user>/bin`
-	`$ ruby server_monitory.rb &`
+	$ cd /home/<user>/bin
+	$ ruby server_monitory.rb &
 
 #### Client
 
 You can execute client_monitor.rb on the same server or from another server on the same network.  For crob friendly usage there is no prompt for hostname and 'localhost' is the default host.  One IP address or hostname can be added as a single command line option. See examples:
 	
-  	`$ ruby client_monitor.rb`		
-  	`$ ruby client_monitory.rb 192.168.1.10`
+  	$ ruby client_monitor.rb	
+  	$ ruby client_monitory.rb 192.168.1.10
 
 ## Bugs and Feedback
 
